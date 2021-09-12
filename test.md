@@ -4,9 +4,9 @@
 - [ ] Bug fix (non-breaking change which fixes an issue) <!-- #bugFix -->
 - [ ] New feature (non-breaking change which adds functionality) <!-- #newFeature -->
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected) <!-- #breakingChange -->
-- [ ] This change requires a documentation update <!-- #documentationChangeRequires -->
 
 ## Affected areas
+- [ ] UI <!-- #uiChange -->
 - [ ] analytics-reporter <!-- #analyticsReporterChange -->
 - [ ] api-events <!-- #apiEventsChange -->
 - [ ] api-graphql <!-- #apiGraphqlChange -->
@@ -21,6 +21,8 @@
 - [ ] There is a new library in this PR <!-- #newLib -->
 - [ ] There is a new integration in this PR <!-- #newIntegration -->
 - [ ] This PR Require a new environment variable <!-- #newEnvVar -->
+- [ ] This PR Require a new feature flag <!-- #featureFlag -->
+- [ ] This PR includes a new UI shard component  <!-- #newUIComponent -->
 
 ## Checklist:
 - [ ] My code follows the style guidelines of this project <!-- #checklist1 -->

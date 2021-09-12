@@ -11,6 +11,7 @@ const results = {
         breakingChange: getValue('breakingChange'),
     },
     affectedAreas: {
+        uiChange: getValue('uiChange'),
         analyticsReporter: getValue('analyticsReporterChange'),
         apiEvents: getValue('apiEventsChange'),
         apiGraphql: getValue('apiGraphqlChange'),
@@ -25,6 +26,8 @@ const results = {
         newLib: getValue('newLib'),
         newIntegration: getValue('newIntegration'),
         newEnvVar: getValue('newEnvVar'),
+        featureFlag: getValue('featureFlag'),
+        newUIComponent: getValue('newUIComponent'),
     },
     checklist: [
         getValue('checklist1'),
@@ -68,6 +71,7 @@ function validatedAreas() {
     let noArea = true
 
     if (
+        results.affectedAreas.uiChange ||
         results.affectedAreas.analyticsReporter ||
         results.affectedAreas.apiEvents ||
         results.affectedAreas.apiGraphql ||
@@ -103,6 +107,18 @@ function validatedSpecialInformation() {
     if (results.specialInformation.newEnvVar) {
         console.error('This PR requires special attention'.bgMagenta)
         console.error('This PR required to set up environment variable'.bgMagenta)
+        console.log('\n')
+    }
+
+    if (results.specialInformation.featureFlag) {
+        console.error('This PR requires special attention'.bgMagenta)
+        console.error('This PR Require a new feature flag'.bgMagenta)
+        console.log('\n')
+    }
+
+    if (results.specialInformation.newUIComponent) {
+        console.error('This PR requires special attention'.bgMagenta)
+        console.error('This PR includes a new UI shard component'.bgMagenta)
         console.log('\n')
     }
 }
