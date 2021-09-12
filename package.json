@@ -1,0 +1,15 @@
+{
+  "name": "cf-checklist",
+  "version": "1.0.0",
+  "description": "pr checklist parser",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Ariel Henryson",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
